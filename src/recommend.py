@@ -104,7 +104,7 @@ def main():
     
     ## Load and preprocess dataset
     print("Loading dataset ...")
-    df = load("./data/movies_metadata.csv")
+    df = load("../data/movies_metadata.csv")
     df = preprocess(df)
 
     ## Give recommendation
