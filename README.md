@@ -17,9 +17,6 @@ This script searches through movie database to find matching titles from user pr
 - Infers genres from the prompt and integrates them into the recommendation process.
 - Provides a ranked list of recommended movies.
 
-
-https://github.com/user-attachments/assets/b2651b53-0285-4b78-b8e6-54d799aaff11
-
 ## Dataset
 Dataset used for this project is "The Movies Dataset" by Rounak Banik 2018 [https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset]. This dataset is comed pre-installed and is located in 'data' folder.
 
