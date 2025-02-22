@@ -9,7 +9,7 @@ A simple movie recommendation system that suggests movies based on user input us
 - [Usage](#usage)
 
 ## Overview
-This script uses
+This script searches through movie database to find matching titles from user prompt and infered genres
 
 ## Features
 - Loads and preprocesses a movie dataset from a CSV file.
