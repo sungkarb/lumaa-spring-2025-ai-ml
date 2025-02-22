@@ -46,4 +46,4 @@ python3 recommend.py "Recommend me good christmas movies to watch with family" 1
 ```
 
 ## Video Demonstration
-
+[![Watch the video](https://i.sstatic.net/Vp2cE.png)](https://youtu.be/Z7s42PrR3Rg)
