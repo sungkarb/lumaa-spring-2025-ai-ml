@@ -17,6 +17,10 @@ This script searches through movie database to find matching titles from user pr
 - Infers genres from the prompt and integrates them into the recommendation process.
 - Provides a ranked list of recommended movies.
 
+
+https://github.com/user-attachments/assets/b2651b53-0285-4b78-b8e6-54d799aaff11
+
+
 ## Prerequisites
 Make sure to install latest version of Python before running the script
 
@@ -46,4 +50,4 @@ python3 recommend.py "Recommend me good christmas movies to watch with family" 1
 ```
 
 ## Video Demonstration
-[![Watch the video](https://i.sstatic.net/Vp2cE.png)](https://youtu.be/Z7s42PrR3Rg)
+https://github.com/user-attachments/assets/fbf17818-51dc-40ea-82e5-10204ee9c255
