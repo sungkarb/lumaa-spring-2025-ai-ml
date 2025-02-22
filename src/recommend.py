@@ -12,8 +12,7 @@ def load(filename: str) -> pd.DataFrame:
     Args:
         filename - name of the csv file to load
     Returns:
-        Dataframe with decreased number of rows (around 300-500) for 
-        training purposes
+        Dataframe with decreased number of rows for training purposes
     """
     df = pd.read_csv(filename, low_memory=False)
     n = len(df)
@@ -62,6 +61,7 @@ def recommend(prompt: str, df: pd.DataFrame, N = 5, alpha = 0.7) -> list[str]:
         df - processed movie dataset containing movie titles and their
              descriptions
         N - number of top matches to return
+        alpha - controls the weight given to genre inferred from the prompt
     Returns:
         List of movies recommended by the system
     """
@@ -78,12 +78,13 @@ def recommend(prompt: str, df: pd.DataFrame, N = 5, alpha = 0.7) -> list[str]:
         if word in mlb.classes_:
             inferred_genres.append(word)
     
-    ## Compute similarity score based on text description similarity and genre
+    ## Compute similarity score based on text description and genre similarity
     inferred_genres_vec = mlb.transform([inferred_genres])
     genre_sim = cosine_similarity(inferred_genres_vec, genre_matrix).flatten()
-
     prompt_vector = vectorizer.transform([prompt])
     overview_sim = cosine_similarity(tfidf_matrix, prompt_vector).flatten()
+
+    ## Average the result using alpha parameter ()
     final_sim = alpha * overview_sim + (1 - alpha) * genre_sim
     top_matches = final_sim.argsort()[::-1][:N]
     return df.iloc[top_matches, :]["title"].to_list()
